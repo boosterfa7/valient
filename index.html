@@ -104,10 +104,31 @@
 <section class="video-section" style="padding: 60px 0; background: #f8f9fa;">
 <div class="container text-center">
 <h2 class="mb-4">Посмотрите, как работает BOOSTER FA7</h2>
-<video controls="" poster="videos/demo-poster.jpg" preload="none" style="max-width: 720px; width: 100%; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.2);">
-<source src="videos/demo.mp4" type="video/mp4"/>
-      Ваш браузер не поддерживает воспроизведение видео.
-    </video>
+
+<div class="video-wrapper" style="position:relative; max-width:640px; margin:auto;">
+  <img
+    src="videos/demo-poster.jpg"
+    alt="Скриншот демо-видео"
+    id="video-poster"
+    style="width:100%; cursor:pointer; display:block;"
+    loading="lazy"
+    onclick="loadVideo()"
+  >
+  <div id="video-container"></div>
+</div>
+<script>
+  function loadVideo() {
+    var container = document.getElementById('video-container');
+    var poster = document.getElementById('video-poster');
+    container.innerHTML = `
+      <video controls autoplay style="width:100%;" loading="lazy">
+        <source src="videos/demo.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+      </video>`;
+    poster.style.display = 'none';
+  }
+</script>
+
 </div>
 </section>
 <section class="models" id="models">
@@ -119,7 +140,7 @@
 <div class="swiper"><div class="swiper-wrapper">
 <div class="swiper-slide">
 <div class="model-image">
-<img alt="BOOSTER FA7" src="images/booster-fa7.jpg"/>
+<img alt="BOOSTER FA7" src="images/booster-fa7.jpg"/ loading="lazy">
 </div>
 <div class="model-content">
 <h3>BOOSTER FA7</h3>
@@ -147,7 +168,7 @@
 </div>
 <div class="swiper-slide">
 <div class="model-image">
-<img alt="BOOSTER FA7 Pro" src="images/booster-fa7-pro.jpg"/>
+<img alt="BOOSTER FA7 Pro" src="images/booster-fa7-pro.jpg"/ loading="lazy">
 </div>
 <div class="model-content">
 <h3>BOOSTER FA7 Pro</h3>
@@ -226,7 +247,7 @@
           </div>
 <div class="testimonial-author">
 <div class="author-avatar">
-<img alt="Иван С." src="images/avatar1.jpg"/>
+<img alt="Иван С." src="images/avatar1.jpg"/ loading="lazy">
 </div>
 <div class="author-info">
 <h4>Иван С.</h4>
@@ -240,7 +261,7 @@
           </div>
 <div class="testimonial-author">
 <div class="author-avatar">
-<img alt="Алексей К." src="images/avatar2.jpg"/>
+<img alt="Алексей К." src="images/avatar2.jpg"/ loading="lazy">
 </div>
 <div class="author-info">
 <h4>Алексей К.</h4>
@@ -254,7 +275,7 @@
           </div>
 <div class="testimonial-author">
 <div class="author-avatar">
-<img alt="Ольга М." src="images/avatar3.jpg"/>
+<img alt="Ольга М." src="images/avatar3.jpg"/ loading="lazy">
 </div>
 <div class="author-info">
 <h4>Ольга М.</h4>
