@@ -1,0 +1,15 @@
+json
+{
+  "name": "Booster FA7",
+  "short_name": "BoosterFA7",
+  "theme_color": "#133929",
+  "background_color": "#f8f9fa",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
