@@ -1,462 +1,2412 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Инновационный криптокотёл Booster FA7 от Valiant: отопление и майнинг в одном устройстве. Экономьте на отоплении и зарабатывайте на добыче криптовалюты. Установка по всей России." name="description"/>
-<meta content="криптокотёл, Booster FA7, майнинг, отопление, майнер, отопительный котёл, криптовалюта, ASIC, майнинг-отопление, отопление для дома, добыча криптовалюты, купить криптокотёл" name="keywords"/>
-<title>Криптокотёл Booster FA7 — отопление и майнинг | Valiant</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
-<link href="css/styles.css" rel="stylesheet"/>
-<link href="favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet"/></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Криптокотёл Booster FA7 — отопление и майнинг | Valiant</title>
+    
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Криптокотёл Booster FA7 - инновационная система отопления и майнинга. Отапливайте дом и зарабатывайте на криптовалюте. Экономия до 40 000₽/мес на коммунальных платежах.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+    
+    <!-- Web Manifest (PWA) -->
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#133929">
+    
+    <!-- OpenGraph / Social Media Meta Tags -->
+    <meta property="og:title" content="Криптокотёл Booster FA7 — отопление и майнинг">
+    <meta property="og:description" content="Зимой — бесплатное отопление, летом — пассивный доход до 50 000₽/мес">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://valient.ru">
+    <meta property="og:image" content="https://valient.ru/images/video-poster.jpg">
+    <meta property="og:site_name" content="Booster FA7">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #133929;
+            --primary-light: #1e6b45;
+            --accent: #ff5722;
+            --accent-light: #ff8a50;
+            --light: #f8f9fa;
+            --dark: #222;
+            --text: #444;
+            --light-gray: #e9ecef;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --shadow: 0 12px 30px rgba(0,0,0,0.12);
+            --shadow-hover: 0 20px 50px rgba(0,0,0,0.2);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            overflow-x: hidden;
+            padding-top: 80px;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            color: var(--primary);
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+        
+        .section-title p {
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 750px;
+            margin: 25px auto 0;
+            line-height: 1.7;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 38px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--primary);
+            text-align: center;
+            cursor: pointer;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            gap: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: white;
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .btn:hover {
+            color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn:hover:before {
+            left: 0;
+        }
+        
+        .btn-accent {
+            background: var(--accent);
+            border-color: var(--accent);
+            box-shadow: 0 8px 20px rgba(255, 87, 34, 0.3);
+        }
+        
+        .btn-accent:hover {
+            color: var(--accent);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .stats-grid {
+            display: flex;
+            gap: 30px;
+            margin: 40px 0;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            text-align: center;
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 15px;
+            min-width: 150px;
+            transition: var(--transition);
+        }
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.25);
+        }
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .finance-benefits {
+            padding: 100px 0;
+            background: white;
+        }
+        .finance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .finance-card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .finance-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        .finance-card h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .finance-card h3 i {
+            color: var(--accent);
+        }
+        .example {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed #ddd;
+        }
+        .label {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .value {
+            font-weight: 700;
+            display: block;
+            margin-top: 5px;
+            font-size: 1.2rem;
+        }
+
+        .comparison-table {
+            margin: 50px 0;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: var(--shadow);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: var(--primary);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: var(--light-gray);
+        }
+        tr:hover {
+            background: rgba(30,107,69,0.1);
+        }
+
+        .mortgage-section {
+            padding: 100px 0;
+            background: var(--primary);
+            color: white;
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        }
+
+        .mortgage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .mortgage-item {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .mortgage-item i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .mortgage-item h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .mortgage-item p {
+            opacity: 0.9;
+        }
+
+        .mortgage-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.15);
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+        
+        .logo span {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--accent);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .hero {
+            padding: 140px 0 100px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.05)" points="0,100 100,0 100,100"/></svg>');
+            background-size: 100% 100%;
+        }
+        
+        .hero-content {
+            max-width: 750px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 25px;
+            color: white;
+            line-height: 1.1;
+            text-shadow: 0 3px 15px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.35rem;
+            margin-bottom: 40px;
+            max-width: 650px;
+            opacity: 0.9;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 25px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .features-section {
+            padding: 120px 0;
+            background: var(--light);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 35px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .feature-card:hover:before {
+            width: 100%;
+            opacity: 0.08;
+        }
+        
+        .feature-icon {
+            width: 100px;
+            height: 100px;
+            background: rgba(30, 107, 69, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            transition: var(--transition);
+            font-size: 2.8rem;
+            color: var(--primary);
+        }
+        
+        .feature-card:hover .feature-icon {
+            background: var(--primary);
+            color: white;
+            transform: rotateY(360deg);
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 25px;
+            font-size: 1.7rem;
+        }
+        
+        .feature-card p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+        
+        .how-it-works {
+            padding: 120px 0;
+            background: white;
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+            counter-reset: step-counter;
+        }
+        
+        .step {
+            position: relative;
+            padding: 50px 35px 40px;
+            background: var(--light);
+            border-radius: 20px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .step:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-10px);
+        }
+        
+        .step:hover h3, .step:hover p, .step:hover .step-number {
+            color: white;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(255, 87, 34, 0.3);
+            transition: var(--transition);
+        }
+        
+        .step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .step p {
+            color: var(--text);
+            line-height: 1.7;
+        }
+        
+        .step:hover p {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .video-section {
+            padding: 100px 0;
+            background: var(--light);
+            text-align: center;
+        }
+        
+        .video-wrapper {
+            max-width: 950px;
+            margin: 40px auto 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+            position: relative;
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition);
+        }
+        
+        .video-wrapper:hover {
+            transform: perspective(1000px) rotateY(0);
+        }
+        
+        #video-poster {
+            width: 100%;
+            display: block;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        #video-poster:hover {
+            opacity: 0.9;
+        }
+        
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90px;
+            height: 90px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+        
+        .play-icon:hover {
+            background: var(--accent);
+            transform: translate(-50%, -50%) scale(1.1);
+            animation: none;
+        }
+        
+        .play-icon i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-left: 5px;
+        }
+        
+        .play-icon:hover i {
+            color: white;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 87, 34, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 87, 34, 0); }
+        }
+        
+        .models {
+            padding: 120px 0;
+            background: white;
+            position: relative;
+        }
+        
+        .models:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(19,57,41,0.03)" points="0,0 100,100 0,100"/></svg>');
+            background-size: cover;
+            z-index: 0;
+        }
+        
+        .models-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+            gap: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        @media (max-width: 580px) {
+            .models-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .model-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .model-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .model-image {
+            position: relative;
+            overflow: hidden;
+            height: 350px;
+        }
+        
+        .model-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .model-card:hover .model-image img {
+            transform: scale(1.05);
+        }
+        
+        .model-content {
+            padding: 40px;
+            background: white;
+        }
+        
+        .model-content h3 {
+            font-size: 2.1rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .specs {
+            margin: 30px 0;
+        }
+        
+        .spec {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--light-gray);
+            font-size: 1.1rem;
+        }
+        
+        .spec:last-child {
+            border-bottom: none;
+        }
+        
+        .price {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .model-content .btn {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 18px;
+            font-size: 1.15rem;
+        }
+        
+        .price-comparison {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .comparison-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.1rem;
+        }
+        
+        .comparison-item:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-item.accent {
+            font-weight: bold;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        
+        .benefits {
+            padding: 120px 0;
+            background: var(--light);
+        }
+        
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 35px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            gap: 30px;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .benefit-icon {
+            flex-shrink: 0;
+            width: 90px;
+            height: 90px;
+            background: rgba(30, 107, 69, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .benefit-item:hover .benefit-icon {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .benefit-content h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-content p {
+            line-height: 1.7;
+        }
+        
+        .testimonials {
+            padding: 120px 0;
+            background: white;
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .testimonial-card {
+            background: var(--light);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: -40px;
+            right: 30px;
+            font-size: 150px;
+            color: rgba(19, 57, 41, 0.05);
+            font-family: serif;
+            line-height: 1;
+            z-index: 0;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 25px;
+            font-size: 1.15rem;
+            z-index: 1;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--light-gray);
+            border: 3px solid var(--primary-light);
+        }
+        
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: #777;
+            font-size: 1rem;
+        }
+        
+        .faq {
+            padding: 120px 0;
+            background: var(--light);
+        }
+        
+        .accordion {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .accordion-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .accordion-item:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .accordion-header {
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            background: white;
+        }
+        
+        .accordion-header:hover {
+            background: rgba(30, 107, 69, 0.05);
+        }
+        
+        .accordion-header i {
+            transition: var(--transition);
+            font-size: 1.3rem;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .accordion-content-inner {
+            padding: 0 30px 30px;
+            font-size: 1.15rem;
+            background: white;
+            line-height: 1.7;
+        }
+        
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+        
+        .accordion-item.active .accordion-header i {
+            transform: rotate(180deg);
+        }
+        
+        .contact {
+            padding: 120px 0;
+            background: white;
+            position: relative;
+        }
+        
+        .contact:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(19,57,41,0.03)" points="0,100 100,0 0,0"/></svg>');
+            background-size: cover;
+            z-index: 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-info {
+            background: var(--primary);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-info:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.05)" points="0,0 100,100 0,100"/></svg>');
+            background-size: cover;
+        }
+        
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 35px;
+            font-size: 1.9rem;
+            position: relative;
+            padding-bottom: 20px;
+            z-index: 1;
+        }
+        
+        .contact-info h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--accent);
+            z-index: 1;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+            align-items: flex-start;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: var(--transition);
+            font-size: 1.4rem;
+        }
+        
+        .contact-icon:hover {
+            background: var(--accent);
+            transform: rotate(15deg);
+        }
+        
+        .contact-icon i {
+            color: white;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .contact-form h3 {
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 20px;
+            font-size: 1.9rem;
+        }
+        
+        .contact-form h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--accent);
+        }
+        
+        .form-group {
+            margin-bottom: 30px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 18px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(30, 107, 69, 0.1);
+        }
+        
+        .contact-form .btn {
+            width: 100%;
+            padding: 18px;
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+        
+        .form-message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+            text-align: center;
+        }
+        
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 100px 0 40px;
+            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 50px;
+            margin-bottom: 70px;
+        }
+        
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: var(--accent);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 18px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.1rem;
+            display: block;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 18px;
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.3rem;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-7px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 1rem;
+        }
+        
+        .offer-notice {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .floating-order-btn {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 999;
+            width: 80px;
+            height: 80px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 8px 25px rgba(255, 87, 34, 0.6);
+            transition: var(--transition);
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+        
+        .floating-order-btn:hover {
+            transform: translateY(-7px) scale(1.1);
+            animation: none;
+            background: var(--accent-light);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animated {
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        /* Новые стили для новостной ленты и акции */
+        .news-ticker {
+            background: var(--accent);
+            color: white;
+            padding: 15px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-ticker-container {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            animation: ticker 30s linear infinite;
+        }
+
+        .news-ticker-item {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 40px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .news-ticker-item i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+
+        .promo-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promo-banner:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.05)" points="0,100 100,0 100,100"/></svg>');
+            background-size: cover;
+        }
+
+        .promo-content {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+
+        .promo-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .promo-content p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .promo-timer {
+            background: rgba(0,0,0,0.2);
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-left: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .promo-timer-label {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            opacity: 0.8;
+        }
+
+        .promo-timer-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        @media (max-width: 1100px) {
+            .hero h1 {
+                font-size: 3.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                gap: 30px;
+            }
+
+            .promo-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .promo-timer {
+                margin: 20px 0 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 25px;
+                box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+                gap: 20px;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .menu-toggle {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                cursor: pointer;
+                z-index: 1001;
+            }
+            
+            .menu-toggle span {
+                width: 35px;
+                height: 4px;
+                background: var(--primary);
+                transition: var(--transition);
+                border-radius: 2px;
+            }
+            
+            .hero {
+                padding: 160px 0 90px;
+                text-align: center;
+            }
+            
+            .hero-content {
+                margin: 0 auto;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .model-image {
+                height: 280px;
+            }
+            
+            .stats-grid {
+                gap: 15px;
+            }
+            .stat-item {
+                min-width: 120px;
+                padding: 15px;
+            }
+            .stat-value {
+                font-size: 2rem;
+            }
+
+            .promo-content h3 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title p {
+                font-size: 1.1rem;
+            }
+            
+            .model-content .btn {
+                padding: 16px;
+            }
+            
+            .contact-grid {
+                gap: 40px;
+            }
+            
+            .contact-info, .contact-form {
+                padding: 35px;
+            }
+            
+            .floating-order-btn {
+                width: 70px;
+                height: 70px;
+                font-size: 1.8rem;
+                bottom: 30px;
+                right: 30px;
+            }
+            
+            .stats-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .stat-item {
+                width: 100%;
+                max-width: 200px;
+            }
+
+            .promo-content h3 {
+                font-size: 1.3rem;
+            }
+
+            .promo-timer-value {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
 <body>
-<header>
-<div class="container">
-<nav>
-<div class="logo"><svg class="site-logo" height="1024" version="1.1" viewbox="0 0 1024 1024" width="1024" xmlns="http://www.w3.org/2000/svg"><path d="M 454 97.017 C 423.475 106.818, 372.872 122.968, 341.548 132.906 C 310.224 142.844, 283.899 151.672, 283.048 152.523 C 281.681 153.890, 281.465 163.575, 281.198 235.285 C 280.880 320.728, 281.468 339.729, 285.091 361.061 C 297.006 431.217, 337.707 491.944, 405.036 540.026 C 439.505 564.641, 499.918 596.427, 512 596.305 C 517.304 596.251, 529.114 591.457, 551.350 580.333 C 571.601 570.202, 584.157 562.925, 604.500 549.530 C 654.758 516.435, 689.126 480.867, 712.265 438 C 727.293 410.159, 738.098 374.373, 740.948 343 C 741.580 336.045, 741.995 296.422, 741.997 242.750 C 742 142.054, 742.888 151.730, 733.370 148.680 C 730.692 147.822, 720.625 144.648, 711 141.627 C 701.375 138.606, 652.719 123.279, 602.875 107.567 C 553.031 91.855, 511.631 79.044, 510.875 79.098 C 510.119 79.152, 484.525 87.216, 454 97.017 M 504 106.010 C 496.773 108.445, 407.381 137.132, 350.500 155.271 L 305.500 169.621 305.500 254.560 C 305.500 331.755, 305.666 340.545, 307.316 350.964 C 313.950 392.844, 330.555 430.527, 356.676 462.978 C 370.036 479.575, 394.853 502.662, 415.500 517.703 C 437.341 533.613, 480.014 558.098, 504.692 568.879 L 511.884 572.021 526.192 565.449 C 566.235 547.057, 605.627 522.210, 634.208 497.319 C 681.660 455.993, 710.288 403.125, 716.959 344.500 C 718.470 331.229, 718.367 168, 716.848 168 C 716.214 168, 707.327 165.335, 697.098 162.077 C 667.832 152.756, 605.694 133.146, 568.500 121.492 C 549.800 115.633, 529.671 109.300, 523.768 107.419 C 511.529 103.519, 511.419 103.512, 504 106.010 M 546.661 139.250 C 545.202 160.319, 539.794 171.025, 520.518 191 C 507.980 203.992, 504.241 209.031, 499.454 219.393 C 493.838 231.548, 491.903 240.005, 491.308 255 C 490.431 277.090, 493.686 290.554, 508.629 326.650 L 516.309 345.203 523.763 344.827 C 536.159 344.201, 536.113 344.380, 535.748 298.161 L 535.500 266.823 533.139 264.911 C 531.326 263.443, 529.182 263, 523.889 263 L 517 263 517 254 L 517 245 531.250 245.002 L 545.500 245.004 545.181 235.502 L 544.863 226 551.931 226 L 559 226 559 236 L 559 246 565.500 246 L 572 246 572 236 L 572 226 579 226 L 586 226 586 236.370 L 586 246.740 591.750 247.871 C 598.738 249.246, 608.705 253.872, 611.701 257.131 C 612.912 258.448, 614.900 261.769, 616.120 264.512 C 618.916 270.798, 619.268 282.904, 616.789 287.500 C 614.943 290.923, 609.596 296.197, 606.207 297.938 C 604.014 299.065, 604.178 299.248, 609.942 302.129 C 620.958 307.634, 625.598 316.305, 624.787 329.873 C 624.264 338.624, 621.980 343.953, 616.332 349.602 C 611.528 354.406, 601.529 358.997, 592.920 360.353 L 586 361.443 586 371.721 L 586 382 579 382 L 572 382 572 371.935 L 572 361.870 565.502 362.185 L 559.004 362.500 559.002 372.250 L 559 382 551.931 382 L 544.863 382 545.181 372.498 L 545.500 362.996 534.750 362.998 C 528.837 362.999, 523.996 363.337, 523.991 363.750 C 523.986 364.163, 526.050 369.295, 528.578 375.156 L 533.174 385.813 523.337 405.404 C 517.927 416.180, 513.246 424.997, 512.936 424.998 C 512.626 424.999, 494.419 381.912, 472.476 329.250 C 436.617 243.190, 432.577 232.943, 432.550 228 C 432.513 221.119, 434.495 217.004, 441.653 209.094 L 447.168 203 394.524 203 L 341.881 203 345.835 207.750 C 350.183 212.974, 353.460 219.077, 357.882 230.191 C 359.482 234.211, 368.757 256.175, 378.492 279 C 406.848 345.476, 450.055 447.550, 466.116 486 L 480.944 521.500 507.552 521.500 L 534.161 521.500 543.190 504.500 C 579.884 435.416, 595.398 409.893, 623.841 371.819 C 648.625 338.642, 657.522 321.576, 663.627 295.500 C 666.431 283.524, 666.231 257.700, 663.243 245.793 C 657.680 223.626, 647.964 207.022, 630.866 190.459 C 620.968 180.870, 607.440 170.226, 606.433 171.233 C 606.172 171.495, 606.478 174.129, 607.112 177.088 C 608.521 183.658, 607.667 197.859, 605.491 204.025 C 602.742 211.818, 597.252 216, 589.772 216 C 585.129 216, 581.775 214.224, 579.758 210.699 C 578.882 209.168, 578.491 203.179, 578.472 191 C 578.448 175.750, 578.144 172.439, 576.113 165.250 C 573.443 155.804, 568.495 147.072, 562 140.343 C 557.938 136.135, 549.607 130, 547.955 130 C 547.596 130, 547.013 134.162, 546.661 139.250 M 557 278.474 L 557 294.232 570.250 293.809 C 581.440 293.452, 584.158 293.043, 587.735 291.180 C 593.029 288.423, 595.182 285.199, 595.741 279.193 C 596.090 275.452, 595.701 273.790, 593.826 271 C 589.942 265.221, 585.694 263.811, 570.399 263.228 L 557 262.716 557 278.474 M 557 327.528 L 557 345.308 570.357 344.705 C 586.183 343.989, 592.045 342.695, 595.942 339.054 C 601.578 333.789, 602.024 322.915, 596.835 317.269 C 592.147 312.168, 586.772 310.682, 571.250 310.195 L 557 309.748 557 327.528 M 741.146 670.925 C 741.349 692.333, 741.433 709.766, 741.332 709.665 C 741.230 709.564, 733.449 698.306, 724.041 684.647 C 714.633 670.989, 702.651 653.780, 697.416 646.407 L 687.897 633 675.448 633 L 663 633 663 692 L 663 751 676.148 751 L 689.297 751 688.567 712.316 L 687.838 673.631 694.610 683.566 C 698.334 689.030, 708.805 704.075, 717.880 717 C 726.954 729.925, 735.981 742.845, 737.939 745.712 L 741.500 750.924 753.750 750.962 L 766 751 766 691.500 L 766 632 753.388 632 L 740.776 632 741.146 670.925 M 782 643 L 782 654 798.500 654 L 815 654 815 702.500 L 815 751 828.074 751 L 841.149 751 840.824 702.500 L 840.500 653.999 856.750 654 L 873 654 873 643 L 873 632 827.500 632 L 782 632 782 643 M 150.320 634.393 C 150.627 635.190, 157.417 653.766, 165.409 675.672 C 173.402 697.577, 182.839 723.375, 186.381 733 L 192.820 750.500 207.828 750.776 L 222.837 751.051 225.004 745.276 C 226.195 742.099, 235.499 717, 245.678 689.500 C 255.857 662, 264.796 638.038, 265.542 636.250 L 266.898 633 252.699 633.005 L 238.500 633.010 223.500 677.495 C 210.147 717.095, 207.058 725.182, 206.977 720.750 C 206.965 720.063, 200.284 700.150, 192.131 676.500 L 177.308 633.500 163.536 633.221 C 151.837 632.984, 149.848 633.160, 150.320 634.393 M 298.488 634.250 C 298.241 634.938, 289.217 658.675, 278.433 687 C 267.650 715.325, 257.761 741.313, 256.458 744.750 L 254.090 751 267.070 751 L 280.050 751 281.070 748.250 C 281.631 746.737, 283.691 741.337, 285.648 736.250 L 289.207 727 313.014 727 L 336.821 727 341.160 738.987 L 345.500 750.973 358.705 750.987 L 371.910 751 369.527 744.750 C 368.217 741.313, 357.999 714.766, 346.822 685.758 L 326.500 633.016 312.719 633.008 C 302.594 633.002, 298.818 633.332, 298.488 634.250 M 388 692 L 388 751 426.500 751 L 465 751 465 740 L 465 729 439 729 L 413 729 413 681 L 413 633 400.500 633 L 388 633 388 692 M 484 692 L 484 751 497 751 L 510 751 510 692 L 510 633 497 633 L 484 633 484 692 M 574.528 634.750 C 574.151 635.712, 567.138 654.050, 558.945 675.500 C 550.751 696.950, 540.946 722.600, 537.156 732.500 L 530.265 750.500 542.801 750.781 C 549.696 750.936, 555.658 750.711, 556.049 750.281 C 556.441 749.852, 558.684 744.438, 561.033 738.250 L 565.305 727 589.075 727 L 612.845 727 616.390 736.250 C 618.340 741.337, 620.389 746.737, 620.943 748.250 L 621.950 751 635.082 751 C 645.197 751, 648.095 750.713, 647.696 749.750 C 646.428 746.694, 624.346 689.768, 613.949 662.752 L 602.500 633.004 588.857 633.002 C 576.790 633, 575.135 633.202, 574.528 634.750 M 581.195 681.266 C 577.215 692.945, 573.968 703.063, 573.979 703.750 C 573.995 704.694, 577.678 705, 589 705 C 597.250 705, 604.008 704.663, 604.018 704.250 C 604.045 703.087, 589.776 661.594, 589.063 660.766 C 588.716 660.362, 585.176 669.587, 581.195 681.266 M 311.693 662.750 C 311.396 663.712, 307.979 673.612, 304.099 684.750 L 297.044 705 312.590 705 L 328.135 705 327.448 702.750 C 327.071 701.513, 323.890 692.055, 320.381 681.733 C 316.871 671.411, 314 662.523, 314 661.983 C 314 660.319, 312.265 660.896, 311.693 662.750 M 274.344 788.983 C 264.987 790.965, 256.931 797.515, 252.799 806.500 C 249.733 813.169, 249.478 830, 252.339 837 C 255.156 843.893, 260.337 849.527, 266.761 852.682 C 271.787 855.150, 273.619 855.496, 281.500 855.470 C 291.758 855.436, 298.045 853.249, 303.839 847.699 C 317.865 834.264, 316.477 805.928, 301.225 794.331 C 294.639 789.323, 283.346 787.077, 274.344 788.983 M 346.718 789.035 C 337.620 791.313, 331.254 796.202, 326.878 804.271 C 323.598 810.320, 323.500 810.832, 323.500 822 C 323.500 832.186, 323.780 834.070, 325.953 838.484 C 331.737 850.239, 343.857 856.847, 357.608 855.743 C 375.310 854.322, 386.252 841.432, 386.252 822 C 386.252 801.947, 375.684 790.024, 356.612 788.558 C 353.250 788.299, 348.798 788.514, 346.718 789.035 M 412.718 789.041 C 403.728 791.278, 398.438 796.528, 397.377 804.265 C 395.621 817.080, 402.168 824.257, 419.613 828.639 C 426.548 830.381, 431 833.467, 431 836.531 C 431 837.424, 429.685 839.469, 428.077 841.077 C 425.606 843.547, 424.360 844, 420.027 844 C 414.150 844, 410.270 842.298, 406.832 838.212 L 404.426 835.352 399.463 837.033 C 395.595 838.342, 394.567 839.131, 394.804 840.607 C 395.423 844.467, 400.575 850.420, 405.482 852.945 C 409.733 855.133, 411.744 855.499, 419.473 855.490 C 427.578 855.482, 429.044 855.181, 433.825 852.541 C 445.301 846.205, 448.161 831.604, 439.523 823.457 C 436.080 820.209, 432.133 818.479, 420.366 815.058 C 412.922 812.894, 411.388 811.831, 410.906 808.500 C 410.162 803.354, 413.891 799.985, 420.297 800.015 C 424.620 800.035, 428.016 801.900, 430.535 805.638 L 432.630 808.746 438.065 806.539 C 444.291 804.011, 444.573 802.704, 440.126 797 C 434.956 790.368, 422.232 786.673, 412.718 789.041 M 451 795.750 L 451 802 460.500 802 L 470 802 470 828.500 L 470 855 477 855 L 484 855 484 828.500 L 484 802 493.500 802 L 503 802 503 795.750 L 503 789.500 477 789.500 L 451 789.500 451 795.750 M 513.999 822.250 L 514 855 536 855 L 558 855 558 849 L 558 843 543 843 L 528 843 528 835.448 L 528 827.897 540.250 828.069 L 552.500 828.242 552.798 822.121 L 553.095 816 540.548 816 L 528 816 528 809 L 528 802 542.500 802 L 557 802 557 796.038 L 557 790.076 535.499 789.788 L 513.998 789.500 513.999 822.250 M 570.998 822.250 L 571 855 578 855 L 585 855 585 843 L 585 831 589.250 831.009 L 593.500 831.018 600.623 842.759 L 607.747 854.500 615.373 854.792 C 619.568 854.953, 623 854.859, 623 854.584 C 623 854.309, 619.625 848.886, 615.500 842.533 C 608.101 831.136, 607.069 829, 608.965 829 C 610.629 829, 617.030 822.843, 618.676 819.659 C 622.497 812.272, 619.596 798.629, 613.273 794.247 C 608.397 790.868, 606.824 790.599, 588.748 790.044 L 570.996 789.500 570.998 822.250 M 661.999 822.250 L 662 855 669 855 L 676 855 676 842.105 L 676 829.210 688.750 829.355 L 701.500 829.500 701.798 823.250 L 702.095 817 689.048 817 L 676 817 676 809.500 L 676 802 692 802 L 708 802 708 796.036 L 708 790.072 684.999 789.786 L 661.998 789.500 661.999 822.250 M 733.399 790.500 C 733.209 791.050, 727.642 805.655, 721.027 822.955 C 714.412 840.256, 709 854.543, 709 854.705 C 709 854.867, 712.164 855, 716.031 855 C 720.758 855, 723.205 854.590, 723.497 853.750 C 723.736 853.063, 724.884 849.900, 726.048 846.722 L 728.164 840.945 741.749 841.222 L 755.334 841.500 757.805 848.250 L 760.276 855 767.206 855 C 773.698 855, 774.094 854.873, 773.495 852.984 C 773.143 851.876, 767.545 837.209, 761.055 820.391 L 749.254 789.814 741.499 789.657 C 737.080 789.568, 733.596 789.930, 733.399 790.500 M 802.750 789.768 L 779 790.036 779 795.994 L 779 801.952 795.418 802.226 L 811.836 802.500 799.918 828.347 C 793.363 842.562, 788 854.375, 788 854.597 C 788 854.818, 791.265 855, 795.256 855 L 802.512 855 815.256 827.029 C 825.509 804.526, 828 798.184, 828 794.588 C 828 792.129, 827.663 789.979, 827.250 789.809 C 826.837 789.639, 815.813 789.621, 802.750 789.768 M 193 822.549 L 193 855.227 210.250 854.840 C 226.374 854.479, 227.788 854.292, 231.911 851.977 C 234.338 850.614, 237.202 848.311, 238.276 846.858 C 240.960 843.227, 242.069 836.456, 240.872 831 C 239.878 826.466, 235.746 821, 233.313 821 C 231.523 821, 231.650 819.348, 233.494 818.641 C 238.548 816.701, 240.695 804.629, 237.158 798.035 C 233.754 791.688, 229.829 790.542, 210.250 790.186 L 193 789.871 193 822.549 M 207 808.663 L 207 816.290 214.118 815.693 C 222.382 815.001, 225 813.270, 225 808.500 C 225 803.535, 222.185 801.707, 213.979 801.345 L 207 801.037 207 808.663 M 273.500 802.861 C 267.013 806.867, 264.117 812.760, 264.044 822.101 C 263.932 836.336, 272.526 845.348, 284.500 843.552 C 293.657 842.179, 299.222 833.996, 299.269 821.835 C 299.300 813.690, 296.195 806.626, 291.102 803.251 C 286.705 800.338, 277.900 800.143, 273.500 802.861 M 345.984 802.865 C 343.682 804.097, 341.535 806.556, 339.656 810.115 C 337.055 815.040, 336.847 816.198, 337.223 823.674 C 337.566 830.508, 338.084 832.529, 340.383 836.002 C 343.376 840.526, 349.465 843.956, 354.500 843.956 C 359.588 843.956, 365.623 840.527, 368.684 835.898 C 371.279 831.973, 371.500 830.888, 371.500 822.069 C 371.500 813.713, 371.196 812.012, 369.105 808.647 C 367.787 806.528, 365.312 803.942, 363.605 802.901 C 359.460 800.373, 350.673 800.356, 345.984 802.865 M 585 811 L 585 820 592.050 820 C 602.849 820, 606.428 817.347, 606.205 809.505 C 606.150 807.577, 605.182 805.694, 603.504 804.250 C 601.266 802.325, 599.741 802, 592.944 802 L 585 802 585 811 M 737.148 816.239 C 734.858 822.433, 732.988 827.837, 732.992 828.250 C 732.996 828.663, 736.825 829, 741.500 829 C 746.422 829, 750 828.585, 750 828.014 C 750 827.004, 742.226 805.892, 741.637 805.304 C 741.459 805.125, 739.438 810.046, 737.148 816.239 M 207 835.003 L 207 843.212 215.097 842.844 C 222.500 842.508, 223.399 842.237, 225.597 839.682 C 228.495 836.313, 228.659 833.036, 226.088 829.861 C 224.399 827.774, 223.180 827.459, 215.588 827.147 L 207 826.795 207 835.003" fill="#133929" fill-rule="evenodd" stroke="none"></path><path d="M 0 512.001 L 0 1024.002 512.250 1023.751 L 1024.500 1023.500 1024.751 511.750 L 1025.002 0 512.501 0 L 0 0 0 512.001 M 0.496 512.500 C 0.496 794.100, 0.610 909.151, 0.750 768.168 C 0.890 627.186, 0.890 396.786, 0.750 256.168 C 0.610 115.551, 0.496 230.900, 0.496 512.500 M 454 97.017 C 423.475 106.818, 372.872 122.968, 341.548 132.906 C 310.224 142.844, 283.899 151.672, 283.048 152.523 C 281.681 153.890, 281.465 163.575, 281.198 235.285 C 280.880 320.728, 281.468 339.729, 285.091 361.061 C 297.006 431.217, 337.707 491.944, 405.036 540.026 C 439.505 564.641, 499.918 596.427, 512 596.305 C 517.304 596.251, 529.114 591.457, 551.350 580.333 C 571.601 570.202, 584.157 562.925, 604.500 549.530 C 654.758 516.435, 689.126 480.867, 712.265 438 C 727.293 410.159, 738.098 374.373, 740.948 343 C 741.580 336.045, 741.995 296.422, 741.997 242.750 C 742 142.054, 742.888 151.730, 733.370 148.680 C 730.692 147.822, 720.625 144.648, 711 141.627 C 701.375 138.606, 652.719 123.279, 602.875 107.567 C 553.031 91.855, 511.631 79.044, 510.875 79.098 C 510.119 79.152, 484.525 87.216, 454 97.017 M 504 106.010 C 496.773 108.445, 407.381 137.132, 350.500 155.271 L 305.500 169.621 305.500 254.560 C 305.500 331.755, 305.666 340.545, 307.316 350.964 C 313.950 392.844, 330.555 430.527, 356.676 462.978 C 370.036 479.575, 394.853 502.662, 415.500 517.703 C 437.341 533.613, 480.014 558.098, 504.692 568.879 L 511.884 572.021 526.192 565.449 C 566.235 547.057, 605.627 522.210, 634.208 497.319 C 681.660 455.993, 710.288 403.125, 716.959 344.500 C 718.470 331.229, 718.367 168, 716.848 168 C 716.214 168, 707.327 165.335, 697.098 162.077 C 667.832 152.756, 605.694 133.146, 568.500 121.492 C 549.800 115.633, 529.671 109.300, 523.768 107.419 C 511.529 103.519, 511.419 103.512, 504 106.010 M 546.661 139.250 C 545.202 160.319, 539.794 171.025, 520.518 191 C 507.980 203.992, 504.241 209.031, 499.454 219.393 C 493.838 231.548, 491.903 240.005, 491.308 255 C 490.431 277.090, 493.686 290.554, 508.629 326.650 L 516.309 345.203 523.763 344.827 C 536.159 344.201, 536.113 344.380, 535.748 298.161 L 535.500 266.823 533.139 264.911 C 531.326 263.443, 529.182 263, 523.889 263 L 517 263 517 254 L 517 245 531.250 245.002 L 545.500 245.004 545.181 235.502 L 544.863 226 551.931 226 L 559 226 559 236 L 559 246 565.500 246 L 572 246 572 236 L 572 226 579 226 L 586 226 586 236.370 L 586 246.740 591.750 247.871 C 598.738 249.246, 608.705 253.872, 611.701 257.131 C 612.912 258.448, 614.900 261.769, 616.120 264.512 C 618.916 270.798, 619.268 282.904, 616.789 287.500 C 614.943 290.923, 609.596 296.197, 606.207 297.938 C 604.014 299.065, 604.178 299.248, 609.942 302.129 C 620.958 307.634, 625.598 316.305, 624.787 329.873 C 624.264 338.624, 621.980 343.953, 616.332 349.602 C 611.528 354.406, 601.529 358.997, 592.920 360.353 L 586 361.443 586 371.721 L 586 382 579 382 L 572 382 572 371.935 L 572 361.870 565.502 362.185 L 559.004 362.500 559.002 372.250 L 559 382 551.931 382 L 544.863 382 545.181 372.498 L 545.500 362.996 534.750 362.998 C 528.837 362.999, 523.996 363.337, 523.991 363.750 C 523.986 364.163, 526.050 369.295, 528.578 375.156 L 533.174 385.813 523.337 405.404 C 517.927 416.180, 513.246 424.997, 512.936 424.998 C 512.626 424.999, 494.419 381.912, 472.476 329.250 C 436.617 243.190, 432.577 232.943, 432.550 228 C 432.513 221.119, 434.495 217.004, 441.653 209.094 L 447.168 203 394.524 203 L 341.881 203 345.835 207.750 C 350.183 212.974, 353.460 219.077, 357.882 230.191 C 359.482 234.211, 368.757 256.175, 378.492 279 C 406.848 345.476, 450.055 447.550, 466.116 486 L 480.944 521.500 507.552 521.500 L 534.161 521.500 543.190 504.500 C 579.884 435.416, 595.398 409.893, 623.841 371.819 C 648.625 338.642, 657.522 321.576, 663.627 295.500 C 666.431 283.524, 666.231 257.700, 663.243 245.793 C 657.680 223.626, 647.964 207.022, 630.866 190.459 C 620.968 180.870, 607.440 170.226, 606.433 171.233 C 606.172 171.495, 606.478 174.129, 607.112 177.088 C 608.521 183.658, 607.667 197.859, 605.491 204.025 C 602.742 211.818, 597.252 216, 589.772 216 C 585.129 216, 581.775 214.224, 579.758 210.699 C 578.882 209.168, 578.491 203.179, 578.472 191 C 578.448 175.750, 578.144 172.439, 576.113 165.250 C 573.443 155.804, 568.495 147.072, 562 140.343 C 557.938 136.135, 549.607 130, 547.955 130 C 547.596 130, 547.013 134.162, 546.661 139.250 M 557 278.474 L 557 294.232 570.250 293.809 C 581.440 293.452, 584.158 293.043, 587.735 291.180 C 593.029 288.423, 595.182 285.199, 595.741 279.193 C 596.090 275.452, 595.701 273.790, 593.826 271 C 589.942 265.221, 585.694 263.811, 570.399 263.228 L 557 262.716 557 278.474 M 557 327.528 L 557 345.308 570.357 344.705 C 586.183 343.989, 592.045 342.695, 595.942 339.054 C 601.578 333.789, 602.024 322.915, 596.835 317.269 C 592.147 312.168, 586.772 310.682, 571.250 310.195 L 557 309.748 557 327.528 M 741.146 670.925 C 741.349 692.333, 741.433 709.766, 741.332 709.665 C 741.230 709.564, 733.449 698.306, 724.041 684.647 C 714.633 670.989, 702.651 653.780, 697.416 646.407 L 687.897 633 675.448 633 L 663 633 663 692 L 663 751 676.148 751 L 689.297 751 688.567 712.316 L 687.838 673.631 694.610 683.566 C 698.334 689.030, 708.805 704.075, 717.880 717 C 726.954 729.925, 735.981 742.845, 737.939 745.712 L 741.500 750.924 753.750 750.962 L 766 751 766 691.500 L 766 632 753.388 632 L 740.776 632 741.146 670.925 M 782 643 L 782 654 798.500 654 L 815 654 815 702.500 L 815 751 828.074 751 L 841.149 751 840.824 702.500 L 840.500 653.999 856.750 654 L 873 654 873 643 L 873 632 827.500 632 L 782 632 782 643 M 150.320 634.393 C 150.627 635.190, 157.417 653.766, 165.409 675.672 C 173.402 697.577, 182.839 723.375, 186.381 733 L 192.820 750.500 207.828 750.776 L 222.837 751.051 225.004 745.276 C 226.195 742.099, 235.499 717, 245.678 689.500 C 255.857 662, 264.796 638.038, 265.542 636.250 L 266.898 633 252.699 633.005 L 238.500 633.010 223.500 677.495 C 210.147 717.095, 207.058 725.182, 206.977 720.750 C 206.965 720.063, 200.284 700.150, 192.131 676.500 L 177.308 633.500 163.536 633.221 C 151.837 632.984, 149.848 633.160, 150.320 634.393 M 298.488 634.250 C 298.241 634.938, 289.217 658.675, 278.433 687 C 267.650 715.325, 257.761 741.313, 256.458 744.750 L 254.090 751 267.070 751 L 280.050 751 281.070 748.250 C 281.631 746.737, 283.691 741.337, 285.648 736.250 L 289.207 727 313.014 727 L 336.821 727 341.160 738.987 L 345.500 750.973 358.705 750.987 L 371.910 751 369.527 744.750 C 368.217 741.313, 357.999 714.766, 346.822 685.758 L 326.500 633.016 312.719 633.008 C 302.594 633.002, 298.818 633.332, 298.488 634.250 M 388 692 L 388 751 426.500 751 L 465 751 465 740 L 465 729 439 729 L 413 729 413 681 L 413 633 400.500 633 L 388 633 388 692 M 484 692 L 484 751 497 751 L 510 751 510 692 L 510 633 497 633 L 484 633 484 692 M 574.528 634.750 C 574.151 635.712, 567.138 654.050, 558.945 675.500 C 550.751 696.950, 540.946 722.600, 537.156 732.500 L 530.265 750.500 542.801 750.781 C 549.696 750.936, 555.658 750.711, 556.049 750.281 C 556.441 749.852, 558.684 744.438, 561.033 738.250 L 565.305 727 589.075 727 L 612.845 727 616.390 736.250 C 618.340 741.337, 620.389 746.737, 620.943 748.250 L 621.950 751 635.082 751 C 645.197 751, 648.095 750.713, 647.696 749.750 C 646.428 746.694, 624.346 689.768, 613.949 662.752 L 602.500 633.004 588.857 633.002 C 576.790 633, 575.135 633.202, 574.528 634.750 M 581.195 681.266 C 577.215 692.945, 573.968 703.063, 573.979 703.750 C 573.995 704.694, 577.678 705, 589 705 C 597.250 705, 604.008 704.663, 604.018 704.250 C 604.045 703.087, 589.776 661.594, 589.063 660.766 C 588.716 660.362, 585.176 669.587, 581.195 681.266 M 311.693 662.750 C 311.396 663.712, 307.979 673.612, 304.099 684.750 L 297.044 705 312.590 705 L 328.135 705 327.448 702.750 C 327.071 701.513, 323.890 692.055, 320.381 681.733 C 316.871 671.411, 314 662.523, 314 661.983 C 314 660.319, 312.265 660.896, 311.693 662.750 M 274.344 788.983 C 264.987 790.965, 256.931 797.515, 252.799 806.500 C 249.733 813.169, 249.478 830, 252.339 837 C 255.156 843.893, 260.337 849.527, 266.761 852.682 C 271.787 855.150, 273.619 855.496, 281.500 855.470 C 291.758 855.436, 298.045 853.249, 303.839 847.699 C 317.865 834.264, 316.477 805.928, 301.225 794.331 C 294.639 789.323, 283.346 787.077, 274.344 788.983 M 346.718 789.035 C 337.620 791.313, 331.254 796.202, 326.878 804.271 C 323.598 810.320, 323.500 810.832, 323.500 822 C 323.500 832.186, 323.780 834.070, 325.953 838.484 C 331.737 850.239, 343.857 856.847, 357.608 855.743 C 375.310 854.322, 386.252 841.432, 386.252 822 C 386.252 801.947, 375.684 790.024, 356.612 788.558 C 353.250 788.299, 348.798 788.514, 346.718 789.035 M 412.718 789.041 C 403.728 791.278, 398.438 796.528, 397.377 804.265 C 395.621 817.080, 402.168 824.257, 419.613 828.639 C 426.548 830.381, 431 833.467, 431 836.531 C 431 837.424, 429.685 839.469, 428.077 841.077 C 425.606 843.547, 424.360 844, 420.027 844 C 414.150 844, 410.270 842.298, 406.832 838.212 L 404.426 835.352 399.463 837.033 C 395.595 838.342, 394.567 839.131, 394.804 840.607 C 395.423 844.467, 400.575 850.420, 405.482 852.945 C 409.733 855.133, 411.744 855.499, 419.473 855.490 C 427.578 855.482, 429.044 855.181, 433.825 852.541 C 445.301 846.205, 448.161 831.604, 439.523 823.457 C 436.080 820.209, 432.133 818.479, 420.366 815.058 C 412.922 812.894, 411.388 811.831, 410.906 808.500 C 410.162 803.354, 413.891 799.985, 420.297 800.015 C 424.620 800.035, 428.016 801.900, 430.535 805.638 L 432.630 808.746 438.065 806.539 C 444.291 804.011, 444.573 802.704, 440.126 797 C 434.956 790.368, 422.232 786.673, 412.718 789.041 M 451 795.750 L 451 802 460.500 802 L 470 802 470 828.500 L 470 855 477 855 L 484 855 484 828.500 L 484 802 493.500 802 L 503 802 503 795.750 L 503 789.500 477 789.500 L 451 789.500 451 795.750 M 513.999 822.250 L 514 855 536 855 L 558 855 558 849 L 558 843 543 843 L 528 843 528 835.448 L 528 827.897 540.250 828.069 L 552.500 828.242 552.798 822.121 L 553.095 816 540.548 816 L 528 816 528 809 L 528 802 542.500 802 L 557 802 557 796.038 L 557 790.076 535.499 789.788 L 513.998 789.500 513.999 822.250 M 570.998 822.250 L 571 855 578 855 L 585 855 585 843 L 585 831 589.250 831.009 L 593.500 831.018 600.623 842.759 L 607.747 854.500 615.373 854.792 C 619.568 854.953, 623 854.859, 623 854.584 C 623 854.309, 619.625 848.886, 615.500 842.533 C 608.101 831.136, 607.069 829, 608.965 829 C 610.629 829, 617.030 822.843, 618.676 819.659 C 622.497 812.272, 619.596 798.629, 613.273 794.247 C 608.397 790.868, 606.824 790.599, 588.748 790.044 L 570.996 789.500 570.998 822.250 M 661.999 822.250 L 662 855 669 855 L 676 855 676 842.105 L 676 829.210 688.750 829.355 L 701.500 829.500 701.798 823.250 L 702.095 817 689.048 817 L 676 817 676 809.500 L 676 802 692 802 L 708 802 708 796.036 L 708 790.072 684.999 789.786 L 661.998 789.500 661.999 822.250 M 733.399 790.500 C 733.209 791.050, 727.642 805.655, 721.027 822.955 C 714.412 840.256, 709 854.543, 709 854.705 C 709 854.867, 712.164 855, 716.031 855 C 720.758 855, 723.205 854.590, 723.497 853.750 C 723.736 853.063, 724.884 849.900, 726.048 846.722 L 728.164 840.945 741.749 841.222 L 755.334 841.500 757.805 848.250 L 760.276 855 767.206 855 C 773.698 855, 774.094 854.873, 773.495 852.984 C 773.143 851.876, 767.545 837.209, 761.055 820.391 L 749.254 789.814 741.499 789.657 C 737.080 789.568, 733.596 789.930, 733.399 790.500 M 802.750 789.768 L 779 790.036 779 795.994 L 779 801.952 795.418 802.226 L 811.836 802.500 799.918 828.347 C 793.363 842.562, 788 854.375, 788 854.597 C 788 854.818, 791.265 855, 795.256 855 L 802.512 855 815.256 827.029 C 825.509 804.526, 828 798.184, 828 794.588 C 828 792.129, 827.663 789.979, 827.250 789.809 C 826.837 789.639, 815.813 789.621, 802.750 789.768 M 193 822.549 L 193 855.227 210.250 854.840 C 226.374 854.479, 227.788 854.292, 231.911 851.977 C 234.338 850.614, 237.202 848.311, 238.276 846.858 C 240.960 843.227, 242.069 836.456, 240.872 831 C 239.878 826.466, 235.746 821, 233.313 821 C 231.523 821, 231.650 819.348, 233.494 818.641 C 238.548 816.701, 240.695 804.629, 237.158 798.035 C 233.754 791.688, 229.829 790.542, 210.250 790.186 L 193 789.871 193 822.549 M 207 808.663 L 207 816.290 214.118 815.693 C 222.382 815.001, 225 813.270, 225 808.500 C 225 803.535, 222.185 801.707, 213.979 801.345 L 207 801.037 207 808.663 M 273.500 802.861 C 267.013 806.867, 264.117 812.760, 264.044 822.101 C 263.932 836.336, 272.526 845.348, 284.500 843.552 C 293.657 842.179, 299.222 833.996, 299.269 821.835 C 299.300 813.690, 296.195 806.626, 291.102 803.251 C 286.705 800.338, 277.900 800.143, 273.500 802.861 M 345.984 802.865 C 343.682 804.097, 341.535 806.556, 339.656 810.115 C 337.055 815.040, 336.847 816.198, 337.223 823.674 C 337.566 830.508, 338.084 832.529, 340.383 836.002 C 343.376 840.526, 349.465 843.956, 354.500 843.956 C 359.588 843.956, 365.623 840.527, 368.684 835.898 C 371.279 831.973, 371.500 830.888, 371.500 822.069 C 371.500 813.713, 371.196 812.012, 369.105 808.647 C 367.787 806.528, 365.312 803.942, 363.605 802.901 C 359.460 800.373, 350.673 800.356, 345.984 802.865 M 585 811 L 585 820 592.050 820 C 602.849 820, 606.428 817.347, 606.205 809.505 C 606.150 807.577, 605.182 805.694, 603.504 804.250 C 601.266 802.325, 599.741 802, 592.944 802 L 585 802 585 811 M 737.148 816.239 C 734.858 822.433, 732.988 827.837, 732.992 828.250 C 732.996 828.663, 736.825 829, 741.500 829 C 746.422 829, 750 828.585, 750 828.014 C 750 827.004, 742.226 805.892, 741.637 805.304 C 741.459 805.125, 739.438 810.046, 737.148 816.239 M 207 835.003 L 207 843.212 215.097 842.844 C 222.500 842.508, 223.399 842.237, 225.597 839.682 C 228.495 836.313, 228.659 833.036, 226.088 829.861 C 224.399 827.774, 223.180 827.459, 215.588 827.147 L 207 826.795 207 835.003" fill="#fbfbfb" fill-rule="evenodd" stroke="none"></path></svg>
-<span>BOOSTER FA7</span>
-</div>
-<ul class="nav-links">
-<li><a href="#features">Преимущества</a></li>
-<li><a href="#how-it-works">Принцип работы</a></li>
-<li><a href="#models">Модели</a></li>
-<li><a href="#benefits">Выгода</a></li>
-<li><a href="#contact">Контакты</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<section class="hero">
-<div class="container">
-<div class="hero-content">
-<h1>Криптокотел BOOSTER FA7</h1>
-<p>Инновационное решение для майнинга и отопления. Превратите тепло от ASIC в источник дохода и комфорта!</p>
-<div class="hero-buttons">
-<a class="btn" href="#models">Выбрать модель</a>
-<a class="btn btn-outline" href="#contact">Консультация</a>
-</div>
-</div>
-</div>
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="images/logo.png" alt="BOOSTER FA7" class="logo-icon">
+                    <span>BOOSTER FA7</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Преимущества</a></li>
+                    <li><a href="#how-it-works">Принцип работы</a></li>
+                    <li><a href="#models">Модели</a></li>
+                    <li><a href="#benefits">Выгода</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Новостная лента -->
+    <div class="news-ticker">
+        <div class="container">
+            <div class="news-ticker-container">
+                <div class="news-ticker-item">
+                    <i class="fas fa-bolt"></i>
+                    <span>Цены на электроэнергию в РФ выросли на 15% с начала года</span>
+                </div>
+                <div class="news-ticker-item">
+                    <i class="fas fa-fire"></i>
+                    <span>Тарифы на газ повысятся на 12% во втором полугодии 2025 года</span>
+                </div>
+                <div class="news-ticker-item">
+                    <i class="fas fa-home"></i>
+                    <span>ЖКХ-услуги в 2025 году подорожают на 8-10% по данным Минстроя РФ</span>
+                </div>
+                <div class="news-ticker-item">
+                    <i class="fas fa-gift"></i>
+                    <span>Акция! До 1 августа установка Booster FA7 в подарок</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content animated">
+                <h1>Криптокотёл BOOSTER FA7: Отапливай — Зарабатывай!</h1>
+                <p>Зимой — бесплатное отопление (экономия до 40 000₽/мес), летом — пассивный доход 25 000-50 000₽/мес. Погашайте ипотеку, кредиты и коммуналку за счёт майнинга!</p>
+                <div class="stats-grid">
+                    <div class="stat-item animated">
+                        <div class="stat-value">до 70%</div>
+                        <div class="stat-label">покрытие ипотеки</div>
+                    </div>
+                    <div class="stat-item animated">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">компенсация отопления</div>
+                    </div>
+                    <div class="stat-item animated">
+                        <div class="stat-value">12-24 мес</div>
+                        <div class="stat-label">окупаемость</div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a class="btn btn-accent" href="#contact">
+                        <i class="fas fa-bolt"></i> Заказать с монтажом
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Баннер акции -->
+    <div class="container">
+        <div class="promo-banner animated">
+            <div class="promo-content">
+                <h3>Акция! До 1 августа установка в подарок</h3>
+                <p>При покупке любой модели Booster FA7 профессиональный монтаж и пусконаладка бесплатно (экономия до 25 000₽)</p>
+            </div>
+            <div class="promo-timer">
+                <div class="promo-timer-label">До конца акции:</div>
+                <div class="promo-timer-value" id="countdown">00д 00:00:00</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Секция ипотеки -->
+    <section class="mortgage-section" id="mortgage">
+        <div class="container">
+            <div class="section-title animated">
+                <h2>Как BOOSTER FA7 помогает погашать ипотеку</h2>
+                <p>Реальная экономия и дополнительный доход</p>
+            </div>
+            <div class="mortgage-grid">
+                <div class="mortgage-item animated">
+                    <i class="fas fa-home"></i>
+                    <h3>Ипотека</h3>
+                    <p>Доход от майнинга покрывает до 70% ежемесячного платежа</p>
+                </div>
+                <div class="mortgage-item animated">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Коммуналка</h3>
+                    <p>Полная компенсация расходов на отопление зимой</p>
+                </div>
+                <div class="mortgage-item animated">
+                    <i class="fas fa-coins"></i>
+                    <h3>Кредиты</h3>
+                    <p>Дополнительный доход 25 000–50 000₽/мес для досрочного погашения</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Финансовая выгода -->
+    <section class="finance-benefits" id="finance">
+        <div class="container">
+            <div class="section-title animated">
+                <h2>Как BOOSTER FA7 помогает с финансами</h2>
+                <p>Конкретные примеры экономии и дохода</p>
+            </div>
+            <div class="finance-grid">
+                <div class="finance-card animated">
+                    <h3><i class="fas fa-home"></i> Ипотека</h3>
+                    <p>Средний платеж 40 000₽/мес может быть покрыт на 70% за счет дохода от майнинга</p>
+                    <div class="example">
+                        <span class="label">Пример:</span>
+                        <span class="value">28 000₽/мес на погашение</span>
+                    </div>
+                </div>
+                <div class="finance-card animated">
+                    <h3><i class="fas fa-lightbulb"></i> Коммуналка</h3>
+                    <p>Полная компенсация расходов на отопление зимой (8 000-15 000₽/мес)</p>
+                    <div class="example">
+                        <span class="label">Пример:</span>
+                        <span class="value">100% экономии зимой</span>
+                    </div>
+                </div>
+                <div class="finance-card animated">
+                    <h3><i class="fas fa-credit-card"></i> Кредиты</h3>
+                    <p>Дополнительный доход 25 000-50 000₽/мес для досрочного погашения</p>
+                    <div class="example">
+                        <span class="label">Пример:</span>
+                        <span class="value">300 000₽/год на погашение</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-title animated">
+                <h2>Почему BOOSTER FA7?</h2>
+                <p>Уникальные возможности нашей системы</p>
+            </div>
+            <div class="features">
+                <div class="feature-card animated">
+                    <div class="feature-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3>Помощь в погашении ипотеки</h3>
+                    <p>Доход от майнинга покрывает до 70% ежемесячного платежа по ипотеке для стандартного дома 100м²</p>
+                </div>
+                <div class="feature-card animated">
+                    <div class="feature-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Гидроохлаждение</h3>
+                    <p>Тихая работа (до 45 дБ) позволяет устанавливать оборудование в жилых помещениях. Увеличивает срок службы ASIC на 30%.</p>
+                </div>
+                <div class="feature-card animated">
+                    <div class="feature-icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <h3>Автоматика</h3>
+                    <p>Интеллектуальная система управления температурными режимами. Дистанционный контроль через мобильное приложение.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как это работает -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-title animated">
+                <h2>Принцип работы</h2>
+                <p>Как криптокотел преобразует энергию майнинга в тепло для вашего дома</p>
+            </div>
+            <div class="steps">
+                <div class="step animated">
+                    <div class="step-number">1</div>
+                    <h3>Электричество</h3>
+                    <p>Система питается от стандартной сети 220В</p>
+                </div>
+                <div class="step animated">
+                    <div class="step-number">2</div>
+                    <h3>Майнинг</h3>
+                    <p>ASIC-майнеры производят криптовалюту и выделяют тепло</p>
+                </div>
+                <div class="step animated">
+                    <div class="step-number">3</div>
+                    <h3>Теплообмен</h3>
+                    <p>Гидросистема забирает тепло от чипов</p>
+                </div>
+                <div class="step animated">
+                    <div class="step-number">4</div>
+                    <h3>Отопление/Охлаждение</h3>
+                    <p>Тепло используется для обогрева или отводится наружу</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Видео секция -->
+    <section class="video-section">
+        <div class="container text-center">
+            <div class="section-title animated">
+                <h2>Посмотрите, как работает BOOSTER FA7</h2>
+                <p>Узнайте, как наша система сочетает майнинг и отопление</p>
+            </div>
+            <div class="video-wrapper animated">
+                <img alt="Скриншот демо-видео" id="video-poster" src="images/video-poster.webp" style="width:100%; cursor:pointer; display:block;"/>
+                <div class="play-icon" onclick="loadVideo()">
+                    <i class="fas fa-play"></i>
+                </div>
+                <div id="video-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модели -->
+    <section class="models" id="models">
+        <div class="container">
+            <div class="section-title animated">
+                <h2>Модельный ряд</h2>
+                <p>Выберите оптимальное решение для ваших потребностей</p>
+            </div>
+            <div class="models-container">
+                <div class="model-card animated">
+                    <div class="model-image">
+                        <img alt="BOOSTER FA7" loading="lazy" src="images/model-fa7.webp"/>
+                    </div>
+                    <div class="model-content">
+                        <h3>BOOSTER FA7</h3>
+                        <div class="specs">
+                            <div class="spec">
+                                <span>Мощность:</span>
+                                <span>7 кВт</span>
+                            </div>
+                            <div class="spec">
+                                <span>Охлаждение:</span>
+                                <span>до +40°C</span>
+                            </div>
+                            <div class="spec">
+                                <span>Габариты:</span>
+                                <span>60×60×60 см</span>
+                            </div>
+                            <div class="spec">
+                                <span>Площадь:</span>
+                                <span>до 100 м²</span>
+                            </div>
+                            <div class="spec">
+                                <span>Доходность:</span>
+                                <span>от 12 000₽/мес</span>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Параметр</th>
+                                        <th>Обычный котел</th>
+                                        <th>Booster FA7</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Затраты на отопление</td>
+                                        <td>8 000-15 000₽/мес</td>
+                                        <td>0₽ (доход вместо затрат)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Дополнительный доход</td>
+                                        <td>0₽</td>
+                                        <td>25 000-50 000₽/мес</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Окупаемость</td>
+                                        <td>Нет</td>
+                                        <td>12-24 месяца</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="price">от 149 990₽</div>
+                        <a class="btn" href="#contact">Заказать</a>
+                    </div>
+                </div>
+                
+                <div class="model-card animated">
+                    <div class="model-image">
+                        <img alt="BOOSTER FA7 Pro" loading="lazy" src="images/model-fa7-pro.webp"/>
+                    </div>
+                    <div class="model-content">
+                        <h3>BOOSTER FA7 Pro</h3>
+                        <div class="specs">
+                            <div class="spec">
+                                <span>Мощность:</span>
+                                <span>11 кВт</span>
+                            </div>
+                            <div class="spec">
+                                <span>Охлаждение:</span>
+                                <span>до +40°C</span>
+                            </div>
+                            <div class="spec">
+                                <span>Габариты:</span>
+                                <span>80×60×60 см</span>
+                            </div>
+                            <div class="spec">
+                                <span>Площадь:</span>
+                                <span>от 100 м²</span>
+                            </div>
+                            <div class="spec">
+                                <span>Доходность:</span>
+                                <span>от 22 000₽/мес</span>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Параметр</th>
+                                        <th>Обычный котел</th>
+                                        <th>Booster FA7 Pro</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Затраты на отопление</td>
+                                        <td>12 000-20 000₽/мес</td>
+                                        <td>0₽ (доход вместо затрат)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Дополнительный доход</td>
+                                        <td>0₽</td>
+                                        <td>35 000-60 000₽/мес</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Окупаемость</td>
+                                        <td>Нет</td>
+                                        <td>10-18 месяцев</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="price">от 219 990₽</div>
+                        <a class="btn" href="#contact">Заказать</a>
+                    </div>
+                </div>
+
+                <!-- Новый блок для криптоконтейнера -->
+                <div class="model-card animated">
+                <div class="model-image">
+                    <img alt="Криптоконтейнер BOOSTER FA7 Industrial" loading="lazy" src="images/container-industrial.webp"/>
+                </div>
+                <div class="model-content">
+                    <h3>Криптоконтейнер BOOSTER FA7 Industrial</h3>
+                    <div class="specs">
+                        <div class="spec">
+                            <span>Мощность:</span>
+                            <span>от 50 кВт</span>
+                        </div>
+                        <div class="spec">
+                            <span>Охлаждение:</span>
+                            <span>гибридная система</span>
+                        </div>
+                        <div class="spec">
+                            <span>Конструкция:</span>
+                            <span>модульная</span>
+                        </div>
+                        <div class="spec">
+                            <span>Гарантия:</span>
+                            <span>3 года</span>
+                        </div>
+                        <div class="spec">
+                            <span>Доходность:</span>
+                            <span>от 300 000₽/мес</span>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Преимущества для бизнеса</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Полная автоматизация майнинга</td>
+                                </tr>
+                                <tr>
+                                    <td>Модульная конструкция под любые площади</td>
+                                </tr>
+                                <tr>
+                                    <td>Гарантия 3 года</td>
+                                </tr>
+                                <tr>
+                                    <td>Решение под ключ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="price">от 9 000 000₽ (под заказ)</div>
+                    <a class="btn" href="#contact">Заказать консультацию</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-<section class="features-section" id="features">
-<div class="container">
-<div class="section-title">
-<h2>Почему BOOSTER FA7?</h2>
-<p>Уникальные возможности нашей системы</p>
-</div>
-<div class="features">
-<div class="feature-card">
-<div class="feature-icon">
-<i class="fas fa-temperature-high"></i>
-</div>
-<h3>Двойная выгода</h3>
-<p>Майнинг криптовалюты + отопление помещения. Летом - эффективное охлаждение ASIC.</p>
-</div>
-<div class="feature-card">
-<div class="feature-icon">
-<i class="fas fa-tint"></i>
-</div>
-<h3>Гидроохлаждение</h3>
-<p>Тихая работа позволяет устанавливать оборудование в жилых помещениях.</p>
-</div>
-<div class="feature-card">
-<div class="feature-icon">
-<i class="fas fa-thermometer-half"></i>
-</div>
-<h3>Автоматика</h3>
-<p>Интеллектуальная система управления температурными режимами.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="how-it-works" id="how-it-works">
-<div class="container">
-<div class="section-title">
-<h2>Принцип работы</h2>
-<p>Как криптокотел преобразует энергию майнинга в тепло для вашего дома</p>
-</div>
-<div class="steps">
-<div class="step">
-<div class="step-number">1</div>
-<h3>Электричество</h3>
-<p>Система питается от стандартной сети 220В</p>
-</div>
-<div class="step">
-<div class="step-number">2</div>
-<h3>Майнинг</h3>
-<p>ASIC-майнеры производят криптовалюту и выделяют тепло</p>
-</div>
-<div class="step">
-<div class="step-number">3</div>
-<h3>Теплообмен</h3>
-<p>Гидросистема забирает тепло от чипов</p>
-</div>
-<div class="step">
-<div class="step-number">4</div>
-<h3>Отопление/Охлаждение</h3>
-<p>Тепло используется для обогрева или отводится наружу</p>
-</div>
-</div>
-</div>
-</section>
-<section class="video-section" style="padding: 60px 0; background: #f8f9fa;">
-<div class="container text-center">
-<h2 class="mb-4">Посмотрите, как работает BOOSTER FA7</h2>
-<div class="video-wrapper" style="position:relative; max-width:640px; margin:auto;">
-<img alt="Скриншот демо-видео" id="video-poster" loading="lazy" onclick="loadVideo()" src="videos/demo-poster.webp" style="width:100%; cursor:pointer; display:block;"/>
-<div id="video-container"></div>
-</div>
-<script>
-  function loadVideo() {
-    var container = document.getElementById('video-container');
-    var poster = document.getElementById('video-poster');
-    container.innerHTML = `
-      <video controls autoplay style="width:100%;" loading="lazy">
-        <source src="videos/demo.mp4" type="video/mp4">
-        Ваш браузер не поддерживает видео.
-      </video>`;
-    poster.style.display = 'none';
-  }
-</script>
-</div>
-</section>
-<section class="models" id="models">
-<div class="container">
-<div class="section-title">
-<h2>Модельный ряд</h2>
-<p>Выберите оптимальное решение для ваших потребностей</p>
-</div>
-<div class="swiper"><div class="swiper-wrapper">
-<div class="swiper-slide">
-<div class="model-image">
-<img alt="BOOSTER FA7" loading="lazy" src="images/booster-fa7.jpg"/>
-</div>
-<div class="model-content">
-<h3>BOOSTER FA7</h3>
-<div class="specs">
-<div class="spec">
-<span>Мощность:</span>
-<span>7 кВт</span>
-</div>
-<div class="spec">
-<span>Охлаждение:</span>
-<span>до +40°C</span>
-</div>
-<div class="spec">
-<span>Габариты:</span>
-<span>60×60×60 см</span>
-</div>
-<div class="spec">
-<span>Площадь:</span>
-<span>до 100 м²</span>
-</div>
-</div>
-<div class="price">от 149 990₽</div>
-<a class="btn" href="#contact">Заказать</a>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="model-image">
-<img alt="BOOSTER FA7 Pro" loading="lazy" src="images/booster-fa7-pro.jpg"/>
-</div>
-<div class="model-content">
-<h3>BOOSTER FA7 Pro</h3>
-<div class="specs">
-<div class="spec">
-<span>Мощность:</span>
-<span>11 кВт</span>
-</div>
-<div class="spec">
-<span>Охлаждение:</span>
-<span>до +40°C</span>
-</div>
-<div class="spec">
-<span>Габариты:</span>
-<span>80×60×60 см</span>
-</div>
-<div class="spec">
-<span>Площадь:</span>
-<span>от 100 м²</span>
-</div>
-</div>
-<div class="price">от 219 990₽</div>
-<a class="btn" href="#contact">Заказать</a>
-</div>
-</div>
-</div><div class="swiper-pagination"></div></div>
-</div>
-</section>
-<section class="benefits" id="benefits">
-<div class="container">
-<div class="section-title">
-<h2>Кому подходит BOOSTER FA7?</h2>
-<p>Решения для разных категорий пользователей</p>
-</div>
-<div class="benefit-grid">
-<div class="benefit-item">
-<div class="benefit-icon">
-<i class="fas fa-coins"></i>
-</div>
-<div class="benefit-content">
-<h3>Майнерам криптовалют</h3>
-<p>Решает проблему перегрева оборудования летом, снижает шум, увеличивает срок службы ASIC.</p>
-</div>
-</div>
-<div class="benefit-item">
-<div class="benefit-icon">
-<i class="fas fa-home"></i>
-</div>
-<div class="benefit-content">
-<h3>Владельцам домов</h3>
-<p>Бесплатное отопление за счет майнинга, дополнительный доход, возможность подключения теплых полов.</p>
-</div>
-</div>
-<div class="benefit-item">
-<div class="benefit-icon">
-<i class="fas fa-building"></i>
-</div>
-<div class="benefit-content">
-<h3>Бизнесу</h3>
-<p>Теплицы, серверные, производственные помещения - стабильный микроклимат и снижение затрат.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="testimonials">
-<div class="container">
-<div class="section-title">
-<h2>Отзывы клиентов</h2>
-<p>Что говорят наши покупатели</p>
-</div>
-<div class="testimonial-grid">
-<div class="testimonial-card">
-<div class="testimonial-text">
-            "Установил BOOSTER FA7 в своем загородном доме. Зимой тепло, летом ASIC не перегреваются. За год система полностью окупилась за счет майнинга!"
-          </div>
-<div class="testimonial-author">
-<div class="author-avatar">
-<img alt="Иван С." loading="lazy" src="images/avatar1.jpg"/>
-</div>
-<div class="author-info">
-<h4>Иван С.</h4>
-<p>Владелец дома, Московская обл.</p>
-</div>
-</div>
-</div>
-<div class="testimonial-card">
-<div class="testimonial-text">
-            "Как майнер оценил тихую работу и стабильные температуры чипов. Летом ферма работает на полную мощность без простоя из-за перегрева."
-          </div>
-<div class="testimonial-author">
-<div class="author-avatar">
-<img alt="Алексей К." loading="lazy" src="images/avatar2.jpg"/>
-</div>
-<div class="author-info">
-<h4>Алексей К.</h4>
-<p>Майнинг-ферма, 15 ASIC</p>
-</div>
-</div>
-</div>
-<div class="testimonial-card">
-<div class="testimonial-text">
-            "Используем в теплице для выращивания зелени. Стабильная температура зимой и дополнительный доход от майнинга - идеальное сочетание для бизнеса."
-          </div>
-<div class="testimonial-author">
-<div class="author-avatar">
-<img alt="Ольга М." loading="lazy" src="images/avatar3.jpg"/>
-</div>
-<div class="author-info">
-<h4>Ольга М.</h4>
-<p>Владелец тепличного хозяйства</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="faq">
-<div class="container">
-<div class="section-title">
-<h2>Частые вопросы</h2>
-<p>Ответы на популярные вопросы о BOOSTER FA7</p>
-</div>
-<div class="accordion">
-<div class="accordion-item">
-<div class="accordion-header">
-<span>Как быстро окупается система?</span>
-<i class="fas fa-chevron-down"></i>
-</div>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p>Срок окупаемости зависит от тарифов на электроэнергию и курса криптовалют. В среднем наши клиенты отмечают окупаемость за 12-24 месяца. Зимой система полностью компенсирует затраты на отопление, летом - приносит чистый доход от майнинга.</p>
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<div class="accordion-header">
-<span>Какие ASIC совместимы с BOOSTER FA7?</span>
-<i class="fas fa-chevron-down"></i>
-</div>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p>Система совместима с большинством популярных ASIC-майнеров: Bitmain Antminer серии S19, Whatsminer M30/M50, Innosilicon и другие. Для моделей с водяным охлаждением (Hydro) предусмотрены специальные адаптеры.</p>
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<div class="accordion-header">
-<span>Можно ли установить систему в квартире?</span>
-<i class="fas fa-chevron-down"></i>
-</div>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p>Да, благодаря гидроохлаждению система работает значительно тише, чем традиционные воздушные системы охлаждения. Уровень шума сопоставим с обычным котлом отопления. Однако рекомендуем проконсультироваться по мощности и тепловыделению для вашего конкретного случая.</p>
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<div class="accordion-header">
-<span>Какое обслуживание требуется?</span>
-<i class="fas fa-chevron-down"></i>
-</div>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p>Раз в год рекомендуется проводить техническое обслуживание: проверка герметичности системы, замена теплоносителя (при необходимости), очистка фильтров. Все процедуры занимают не более 2-3 часов и могут быть выполнены нашим сервисным специалистом.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="contact" id="contact">
-<div class="container">
-<div class="section-title">
-<h2>Контакты</h2>
-<p>Свяжитесь с нами для консультации или заказа</p>
-</div>
-<div class="contact-grid">
-<div class="contact-info">
-<h3>Контактная информация</h3>
-<div class="contact-item">
-<div class="contact-icon">
-<i class="fas fa-map-marker-alt"></i>
-</div>
-<span>г. Москва, Пресненская набережная 10, "Москва-Сити"</span>
-</div>
-<div class="contact-item">
-<div class="contact-icon">
-<i class="fas fa-phone-alt"></i>
-</div>
-<span>+7 (499) 390-03-50</span>
-</div>
-<div class="contact-item">
-<div class="contact-icon">
-<i class="fab fa-whatsapp"></i>
-</div>
-<span>+7 (925) 046-52-90 (WhatsApp)</span>
-</div>
-<div class="contact-item">
-<div class="contact-icon">
-<i class="fas fa-envelope"></i>
-</div>
-<span>info@valient.ru</span>
-</div>
-<div class="contact-item">
-<div class="contact-icon">
-<i class="fas fa-globe"></i>
-</div>
-<span>valient.ru</span>
-</div>
-<div class="contact-item">
-<div class="contact-icon">
-<i class="fas fa-shopping-cart"></i>
-</div>
-<span><a href="https://www.ozon.ru/seller/dovik-2643910/?miniapp=seller_2643910" style="color: inherit; text-decoration: underline;" target="_blank">Мы на Ozon</a></span>
-</div>
-</div>
-<div class="contact-form">
-<form>
-<div class="form-group">
-<label for="name">Ваше имя</label>
-<input id="name" required="" type="text"/>
-</div>
-<div class="form-group">
-<label for="email">Email</label>
-<input id="email" required="" type="email"/>
-</div>
-<div class="form-group">
-<label for="phone">Телефон</label>
-<input id="phone" type="tel"/>
-</div>
-<div class="form-group">
-<label for="message">Сообщение</label>
-<textarea id="message" required=""></textarea>
-</div>
-<button class="btn" type="submit">Отправить</button>
-</form>
-</div>
-</div>
-</div>
-</section>
-<footer>
-<div class="container">
-<div class="footer-grid">
-<div class="footer-col">
-<h3>BOOSTER FA7</h3>
-<p>Инновационная система майнинга с функцией отопления и охлаждения помещений.</p>
-<div class="social-links">
-<a href="https://t.me/faflow_tech" target="_blank"><i class="fab fa-telegram"></i></a>
-<a href="https://rutube.ru/channel/54776081/videos/" target="_blank"><i class="fab fa-r-project"></i></a>
-<a href="https://vk.com/feed" target="_blank"><i class="fab fa-vk"></i></a>
-</div>
-</div>
-<div class="footer-col">
-<h3>Модели</h3>
-<ul class="footer-links">
-<li><a href="#">BOOSTER FA7</a></li>
-<li><a href="#">BOOSTER FA7 Pro</a></li>
-<li><a href="#">Криптоконтейнеры</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h3>Поддержка</h3>
-<ul class="footer-links">
-<li><a href="#">Документация</a></li>
-<li><a href="#">FAQ</a></li>
-<li><a href="#">Сервисные центры</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h3>Компания</h3>
-<ul class="footer-links">
-<li><a href="#">О нас</a></li>
-<li><a href="#">Блог</a></li>
-<li><a href="#">Вакансии</a></li>
-</ul>
-</div>
-</div>
-<div class="copyright">
-<p>© 2023 BOOSTER FA7. Все права защищены.</p>
-</div>
-</div>
-</footer>
-<script src="js/scripts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script><script>
-  const swiper = new Swiper('.swiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      }
-    }
-  });
-</script></body>
+
+    <!-- Выгода -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-title animated">
+                <h2>Кому подходит BOOSTER FA7?</h2>
+                <p>Решения для разных категорий пользователей</p>
+            </div>
+            <div class="benefit-grid">
+                <div class="benefit-item animated">
+                    <div class="benefit-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Майнерам криптовалют</h3>
+                        <p>Решает проблему перегрева оборудования летом, снижает шум, увеличивает срок службы ASIC.</p>
+                    </div>
+                </div>
+                <div class="benefit-item animated">
+                    <div class="benefit-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Владельцам домов</h3>
+                        <p>Бесплатное отопление за счет майнинга, дополнительный доход, возможность подключения теплых полов.</p>
+                    </div>
+                </div>
+                <div class="benefit-item animated">
+                    <div class="benefit-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Бизнесу</h3>
+                        <p>Теплицы, серверные, производственные помещения - стабильный микроклимат и снижение затрат.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title animated">
+                <h2>Отзывы клиентов</h2>
+                <p>Что говорят наши покупатели</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card animated">
+                    <div class="testimonial-text">
+                        "Установил BOOSTER FA7 в своем загородном доме. Зимой тепло, летом ASIC не перегреваются. Доход от майнинга помогает выплачивать ипотеку — за год сэкономил уже 280 000 рублей!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img alt="Иван С." loading="lazy" src="https://randomuser.me/api/portraits/men/32.jpg"/>
+                        </div>
+                        <div class="author-info">
+                            <h4>Иван С.</h4>
+                            <p>Владелец дома, Московская обл.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animated">
+                    <div class="testimonial-text">
+                        "Как майнер оценил тихую работу и стабильные температуры чипов. Летом ферма работает на полную мощность без простоя из-за перегрева. Доходность позволяет досрочно погашать кредит за оборудование."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img alt="Алексей К." loading="lazy" src="https://randomuser.me/api/portraits/men/67.jpg"/>
+                        </div>
+                        <div class="author-info">
+                            <h4>Алексей К.</h4>
+                            <p>Майнинг-ферма, 15 ASIC</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animated">
+                    <div class="testimonial-text">
+                        "Используем в теплице для выращивания зелени. Стабильная температура зимой и дополнительный доход от майнинга - идеальное сочетание для бизнеса. Окупили систему за 8 месяцев."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img alt="Ольга М." loading="lazy" src="https://randomuser.me/api/portraits/women/44.jpg"/>
+                        </div>
+                        <div class="author-info">
+                            <h4>Ольга М.</h4>
+                            <p>Владелец тепличного хозяйства</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title animated">
+                <h2>Частые вопросы</h2>
+                <p>Ответы на популярные вопросы о BOOSTER FA7</p>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item animated">
+                    <div class="accordion-header">
+                        <span>Как BOOSTER FA7 помогает погашать ипотеку?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>При стандартной площади дома 100м² система генерирует доход 25 000–50 000₽/мес, который можно направлять на погашение ипотеки. Это покрывает значительную часть ежемесячного платежа.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animated">
+                    <div class="accordion-header">
+                        <span>Как быстро окупается система?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Срок окупаемости зависит от тарифов на электроэнергию и курса криптовалют. В среднем наши клиенты отмечают окупаемость за 12-24 месяца. Зимой система полностью компенсирует затраты на отопление, летом - приносит чистый доход от майнинга.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animated">
+                    <div class="accordion-header">
+                        <span>Какие ASIC совместимы с BOOSTER FA7?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Система совместима с большинством популярных ASIC-майнеров: Bitmain Antminer серии S19, Whatsminer M30/M50, Innosilicon и другие. Для моделей с водяным охлаждением (Hydro) предусмотрены специальные адаптеры.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animated">
+                    <div class="accordion-header">
+                        <span>Можно ли установить систему в квартире?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Да, благодаря гидроохлаждению система работает значительно тише, чем традиционные воздушные системы охлаждения. Уровень шума сопоставим с обычным котлом отопления. Однако рекомендуем проконсультироваться по мощности и тепловыделению для вашего конкретного случая.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animated">
+                    <div class="accordion-header">
+                        <span>Какое обслуживание требуется?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Раз в год рекомендуется проводить техническое обслуживание: проверка герметичности системы, замена теплоносителя (при необходимости), очистка фильтров. Все процедуры занимают не более 2-3 часов и могут быть выполнены нашим сервисным специалистом.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title animated">
+                <h2>Контакты</h2>
+                <p>Свяжитесь с нами для консультации или заказа</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info animated">
+                    <h3>Контактная информация</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <span>г. Москва, Пресненская набережная 10, "Москва-Сити"</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <span>+7 (499) 390-03-50</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <span>+7 (925) 046-52-90 (WhatsApp)</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <span>info@valient.ru</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <span>valient.ru</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <span><a href="https://www.ozon.ru/seller/dovik-2643910/?miniapp=seller_2643910&__rr=1&abt_att=1&origin_referer=valient.ru" target="_blank" style="color: white;">Наш магазин на OZON</a></span>
+                    </div>
+                </div>
+                <div class="contact-form animated">
+                    <form id="order-form">
+                        <h3>Отправить запрос</h3>
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input id="name" required type="text" placeholder="Иван Иванов">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input id="phone" required type="tel" placeholder="+7 (999) 999-99-99">
+                        </div>
+                        <div class="form-group">
+                            <label for="model">Интересующая модель</label>
+                            <select id="model" required>
+                                <option value="">Выберите модель</option>
+                                <option value="BOOSTER FA7">BOOSTER FA7</option>
+                                <option value="BOOSTER FA7 Pro">BOOSTER FA7 Pro</option>
+                                <option value="Криптоконтейнер BOOSTER FA7">Криптоконтейнер BOOSTER FA7</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" required>Интересует криптокотёл, пришлите подробную информацию</textarea>
+                        </div>
+                        <div id="form-message" class="form-message" style="display: none;"></div>
+                        <button class="btn" type="submit">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Плавающая кнопка -->
+    <a href="#contact" class="floating-order-btn">
+        <i class="fas fa-shopping-cart"></i>
+    </a>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col animated">
+                    <h3>BOOSTER FA7</h3>
+                    <p>Инновационная система майнинга с функцией отопления и охлаждения помещений.</p>
+                    <div class="social-links">
+                        <a href="https://t.me/faflow_tech" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://rutube.ru/channel/54776081/videos/" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://vk.com/feed" target="_blank"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col animated">
+                    <h3>Модели</h3>
+                    <ul class="footer-links">
+                        <li><a href="#models">BOOSTER FA7</a></li>
+                        <li><a href="#models">BOOSTER FA7 Pro</a></li>
+                        <li><a href="#models">Криптоконтейнеры</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col animated">
+                    <h3>Поддержка</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Документация</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#">Сервисные центры</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright animated">
+                <p>© 2025 BOOSTER FA7. Все права защищены.</p>
+            </div>
+            <div class="offer-notice animated">
+                <p>Информация на сайте не является публичной офертой</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Функция для загрузки видео
+        function loadVideo() {
+            const container = document.getElementById('video-container');
+            const poster = document.getElementById('video-poster');
+            container.innerHTML = `
+                <video controls autoplay muted loop style="width:100%;">
+                    <source src="videos/demo.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>`;
+            document.querySelector('.play-icon').style.display = 'none';
+            poster.style.display = 'none';
+        }
+
+        // Таймер обратного отсчета для акции (обновленный до 1 августа 2025 года)
+        function updateCountdown() {
+            // Устанавливаем дату окончания акции - 1 августа 2025 23:59:59 по Москве (UTC+3)
+            const endDate = new Date('August 1, 2025 23:59:59 GMT+0300').getTime();
+            
+            // Получаем текущее время с учетом московского часового пояса
+            const now = new Date().toLocaleString("en-US", {timeZone: "Europe/Moscow"});
+            const currentTime = new Date(now).getTime();
+            
+            const distance = endDate - currentTime;
+            
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = "Акция завершена";
+                return;
+            }
+            
+            // Рассчитываем дни, часы, минуты, секунды
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Форматируем вывод с ведущими нулями
+            const formattedDays = days.toString().padStart(2, '0');
+            const formattedHours = hours.toString().padStart(2, '0');
+            const formattedMinutes = minutes.toString().padStart(2, '0');
+            const formattedSeconds = seconds.toString().padStart(2, '0');
+            
+            document.getElementById('countdown').innerHTML = 
+                `${formattedDays}д ${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+        }
+
+        // Инициализация формы заказа
+        function initOrderForm() {
+            const form = document.getElementById('order-form');
+            const formMessage = document.getElementById('form-message');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Показать сообщение о загрузке
+                formMessage.textContent = 'Отправка данных...';
+                formMessage.className = 'form-message';
+                formMessage.style.display = 'block';
+                
+                // Сбор данных формы
+                const formData = {
+                    name: document.getElementById('name').value,
+                    phone: document.getElementById('phone').value,
+                    model: document.getElementById('model').value,
+                    message: document.getElementById('message').value,
+                    _replyto: 'info@valient.ru', // Email для ответа
+                    _subject: 'Новая заявка с сайта BOOSTER FA7'
+                };
+                
+                // Отправка данных через Formspree
+                fetch('https://formspree.io/f/xbjvqjyp', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(formData),
+                    mode: 'cors'
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error('Ошибка сети');
+                    }
+                })
+                .then(data => {
+                    // Успешная отправка
+                    formMessage.textContent = 'Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.';
+                    formMessage.className = 'form-message success';
+                    form.reset();
+                })
+                .catch(error => {
+                    // Ошибка отправки
+                    formMessage.textContent = 'Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз или свяжитесь с нами другим способом.';
+                    formMessage.className = 'form-message error';
+                    console.error('Error:', error);
+                });
+            });
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимации
+            function animateOnScroll() {
+                const elements = document.querySelectorAll('.animated');
+                const windowHeight = window.innerHeight;
+                
+                elements.forEach(el => {
+                    const elementTop = el.getBoundingClientRect().top;
+                    if (elementTop < windowHeight * 0.85) {
+                        el.style.opacity = 1;
+                        el.style.visibility = 'visible';
+                    }
+                });
+            }
+            
+            // Инициализация компонентов
+            initOrderForm();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll();
+            
+            // Мобильное меню
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.toggle('active');
+                this.classList.toggle('active');
+            });
+            
+            // Плавная прокрутка
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        document.querySelector('.nav-links').classList.remove('active');
+                    }
+                });
+            });
+
+            // Аккордеон FAQ
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.addEventListener('click', function() {
+                    const item = this.parentElement;
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
 </html>
