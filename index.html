@@ -1214,6 +1214,7 @@
             width: 50px;
             height: 4px;
             background: var(--accent);
+            z-index: 1;
         }
         
         .footer-links {
@@ -1402,6 +1403,19 @@
         .promo-timer-value {
             font-size: 1.8rem;
             font-weight: 700;
+        }
+
+        /* Новые стили для баннера о 1000 клиентах */
+        .hidden {
+            display: none !important;
+        }
+
+        .client-milestone {
+            background: linear-gradient(135deg, #ff5722 0%, #ff8a50 100%);
+        }
+
+        .client-milestone:before {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.15)" points="0,100 100,0 100,100"/></svg>');
         }
 
         @keyframes ticker {
@@ -1639,9 +1653,9 @@
         </div>
     </section>
 
-    <!-- Баннер акции -->
+    <!-- Баннер акции (скрытый, но сохраненный для будущего использования) -->
     <div class="container">
-        <div class="promo-banner animated">
+        <div class="promo-banner animated hidden">
             <div class="promo-content">
                 <h3>Акция! До 1 августа установка в подарок</h3>
                 <p>При покупке любой модели Booster FA7 профессиональный монтаж и пусконаладка бесплатно (экономия до 25 000₽)</p>
@@ -1649,6 +1663,14 @@
             <div class="promo-timer">
                 <div class="promo-timer-label">До конца акции:</div>
                 <div class="promo-timer-value" id="countdown">00д 00:00:00</div>
+            </div>
+        </div>
+
+        <!-- Новый баннер о 1000 клиентах -->
+        <div class="promo-banner animated client-milestone">
+            <div class="promo-content">
+                <h3>Сегодня мы достигли 1000 клиентов!</h3>
+                <p>Присоединяйтесь к сообществу довольных владельцев BOOSTER FA7</p>
             </div>
         </div>
     </div>
@@ -2262,9 +2284,9 @@
                 <div class="footer-col animated">
                     <h3>Поддержка</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Документация</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#">Сервисные центры</a></li>
+                        <li><a href="https://disk.yandex.ru/d/3Qht_V9HZLliOA" target="_blank" rel="noopener noreferrer">Документация</a></li>
+                        <li><a href="https://disk.yandex.ru/d/B4yZuX9h2YYWuA" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+                        <li><a href="https://disk.yandex.ru/d/Exey5C2_eJtLjw" target="_blank" rel="noopener noreferrer">Сервисные центры</a></li>
                     </ul>
                 </div>
             </div>
@@ -2291,7 +2313,8 @@
             poster.style.display = 'none';
         }
 
-        // Таймер обратного отсчета для акции (обновленный до 1 августа 2025 года)
+        // Таймер обратного отсчета для акции (закомментирован, но сохранен для будущего использования)
+        /*
         function updateCountdown() {
             // Устанавливаем дату окончания акции - 1 августа 2025 23:59:59 по Москве (UTC+3)
             const endDate = new Date('August 1, 2025 23:59:59 GMT+0300').getTime();
@@ -2322,6 +2345,7 @@
             document.getElementById('countdown').innerHTML = 
                 `${formattedDays}д ${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
         }
+        */
 
         // Инициализация формы заказа
         function initOrderForm() {
@@ -2347,7 +2371,7 @@
                 };
                 
                 // Отправка данных через Formspree
-                fetch('https://formspree.io/f/xbjvqjyp', {
+                fetch('https://formspree.io/f/mwpqqdgw', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -2396,8 +2420,8 @@
             
             // Инициализация компонентов
             initOrderForm();
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
+            // updateCountdown(); // Закомментировано, так как акция временно неактивна
+            // setInterval(updateCountdown, 1000); // Закомментировано, так как акция временно неактивна
             window.addEventListener('scroll', animateOnScroll);
             animateOnScroll();
             
